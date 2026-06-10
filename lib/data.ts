@@ -43,43 +43,46 @@ export const DEVELOPER_PROFILES = [
 ];
 
 export const MY_STACK = {
-    programming: [
-        { name: 'Python', icon: '/logo/ts.png' }, 
-        { name: 'Java', icon: '/logo/js.png' },
-        { name: 'C', icon: '/logo/ts.png' },
+    Frontend: [
+        { name: 'React 19', icon: '/logo/react.png' },
+        { name: 'TypeScript', icon: '/logo/ts.png' },
+        { name: 'Tailwind CSS', icon: '/logo/tailwind.png' },
+        { name: 'shadcn/ui', icon: '/logo/react.png' },
+        { name: 'TanStack Query', icon: '/logo/react.png' },
+        { name: 'Recharts', icon: '/logo/gsap.png' },
+        { name: 'i18next', icon: '/logo/js.png' },
+        { name: 'Streamlit', icon: '/logo/gsap.png' },
+        { name: 'Capacitor', icon: '/logo/ts.png' },
+        { name: 'Vite', icon: '/logo/ts.png' },
+    ],
+    'Backend & BaaS': [
+        { name: 'Python (FastAPI)', icon: '/logo/ts.png' },
+        { name: 'Supabase', icon: '/logo/next.png' },
+        { name: 'Edge Functions', icon: '/logo/next.png' },
+        { name: 'WebSocket', icon: '/logo/node.png' },
+        { name: 'Alembic', icon: '/logo/postgreSQL.png' },
+    ],
+    Database: [
+        { name: 'PostgreSQL', icon: '/logo/postgreSQL.png' },
+        { name: 'PostGIS', icon: '/logo/postgreSQL.png' },
+        { name: 'MinIO / S3', icon: '/logo/aws.png' },
     ],
     'AI & Machine Learning': [
-        { name: 'Machine Learning', icon: '/logo/gsap.png' },
-        { name: 'Prompt Engineering', icon: '/logo/framer-motion.png' },
-        { name: 'LLMs', icon: '/logo/next.png' },
         { name: 'RAG', icon: '/logo/react.png' },
-        { name: 'Sentence Transformers', icon: '/logo/redux.png' },
+        { name: 'LLMs (Gemini, Claude, Llama)', icon: '/logo/next.png' },
+        { name: 'AI Agents', icon: '/logo/framer-motion.png' },
+        { name: 'Prompt Engineering', icon: '/logo/framer-motion.png' },
+        { name: 'Scikit-Learn', icon: '/logo/react.png' },
+        { name: 'Pandas & NumPy', icon: '/logo/redux.png' },
+        { name: 'NLP', icon: '/logo/node.png' },
+        { name: 'FAISS', icon: '/logo/mongodb.svg' },
     ],
-    'Core Computer Science': [
-        { name: 'OOP', icon: '/logo/node.png' },
-        { name: 'DSA', icon: '/logo/nest.svg' },
-        { name: 'DBMS', icon: '/logo/mysql.svg' },
-        { name: 'Computer Networks', icon: '/logo/postgreSQL.png' },
-        { name: 'Cloud Computing', icon: '/logo/aws.png' },
-    ],
-    cloud: [
-        { name: 'AWS', icon: '/logo/aws.png' },
-        { name: 'Azure AI', icon: '/logo/ts.png' },
-        { name: 'Amazon EC2', icon: '/logo/aws.png' },
-        { name: 'Amazon S3', icon: '/logo/aws.png' },
-    ],
-    'Web & Visualization': [
-        { name: 'HTML', icon: '/logo/ts.png' },
-        { name: 'CSS', icon: '/logo/sass.png' },
-        { name: 'Power BI', icon: '/logo/ts.png' },
-        { name: 'Tableau', icon: '/logo/ts.png' },
-    ],
-    tools: [
-        { name: 'Git', icon: '/logo/git.png' },
-        { name: 'GitHub', icon: '/logo/github.png' },
-        { name: 'GitLab', icon: '/logo/ts.png' },
-        { name: 'VS Code', icon: '/logo/ts.png' },
-        { name: 'Bruno', icon: '/logo/ts.png' },
+    'Tools & QA': [
+        { name: 'Docker & Compose', icon: '/logo/docker.svg' },
+        { name: 'GitLab CI/CD', icon: '/logo/ts.png' },
+        { name: 'Vitest & Playwright', icon: '/logo/js.png' },
+        { name: 'Bun & UV', icon: '/logo/js.png' },
+        { name: 'PostHog', icon: '/logo/gsap.png' },
     ],
 };
 
