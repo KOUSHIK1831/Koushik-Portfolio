@@ -92,17 +92,10 @@ const InternshipContributions = () => {
         {
             icon: GitCommit,
             iconBg: 'bg-blue-500/10 text-blue-400',
-            number: '529',
+            number: '609',
             label: 'Total Commits',
         },
     ];
-
-    const handleScrollToCommunity = () => {
-        const target = document.getElementById('community');
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     return (
         <section ref={sectionRef} className="pb-section border-t border-muted-foreground/5 bg-background relative overflow-hidden" id="internship-contributions">
@@ -126,9 +119,8 @@ const InternshipContributions = () => {
                     {cards.map((card, i) => {
                         const IconComponent = card.icon;
                         return (
-                            <button
+                            <div
                                 key={i}
-                                onClick={handleScrollToCommunity}
                                 className="contrib-card opacity-0 text-left w-full group relative rounded-2xl border border-muted-foreground/10 bg-muted/5 p-6 hover:bg-muted/10 hover:border-primary/25 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-1"
                             >
                                 {/* Top colored highlight bar on hover */}
@@ -148,7 +140,7 @@ const InternshipContributions = () => {
                                 <div className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                                     {card.label}
                                 </div>
-                            </button>
+                            </div>
                         );
                     })}
                 </div>

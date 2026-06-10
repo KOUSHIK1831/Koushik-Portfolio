@@ -423,7 +423,7 @@ export const MY_EXPERIENCE: IExperience[] = [
         company: 'Viswam AI | IIIT Hyderabad',
         duration: 'Jan 2026 - Present',
         description: [
-            'Contributed Projects: 16 | Issues: 28 | MRs: 54 | Total Commits: 529',
+            'Contributed Projects: 16 | Issues: 28 | MRs: 54 | Total Commits: 609',
             'Built AI-powered applications using LLMs',
             'Developed a Groq-powered coding assistant',
             'Created a RAG-based Campus Guide using institutional documents',
