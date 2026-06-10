@@ -54,20 +54,31 @@ const Experiences = () => {
     return (
         <section className="py-section" id="my-experience">
             <div className="container" ref={containerRef}>
-                <SectionTitle title="My Experience" />
+                <SectionTitle title="Experience Timeline" />
 
-                <div className="grid gap-14">
-                    {MY_EXPERIENCE.map((item) => (
-                        <div key={item.title} className="experience-item">
-                            <p className="text-xl text-muted-foreground">
-                                {item.company}
-                            </p>
-                            <p className="text-5xl font-anton leading-none mt-3.5 mb-2.5">
-                                {item.title}
-                            </p>
-                            <p className="text-lg text-muted-foreground">
-                                {item.duration}
-                            </p>
+                <div className="grid gap-20">
+                    {MY_EXPERIENCE.map((item, index) => (
+                        <div key={`${item.title}-${index}`} className="experience-item grid md:grid-cols-12 gap-4">
+                            <div className="md:col-span-4">
+                                <p className="text-xl text-primary font-medium">
+                                    {item.duration}
+                                </p>
+                                <p className="text-2xl mt-1">
+                                    {item.company}
+                                </p>
+                            </div>
+                            <div className="md:col-span-8">
+                                <p className="text-4xl sm:text-5xl font-anton leading-none mb-4 uppercase">
+                                    {item.title}
+                                </p>
+                                {item.description && (
+                                    <ul className="list-disc list-outside ml-5 space-y-2 text-muted-foreground text-lg">
+                                        {item.description.map((desc, i) => (
+                                            <li key={i}>{desc}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
                         </div>
                     ))}
                 </div>

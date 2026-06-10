@@ -1,66 +1,32 @@
-import { GENERAL_INFO } from '@/lib/data';
-import { GitFork, Star } from 'lucide-react';
+import { GENERAL_INFO, SOCIAL_LINKS } from '@/lib/data';
 
-interface RepoStats {
-    stargazers_count: number;
-    forks_count: number;
-}
-
-const Footer = async () => {
-    const repoStats = await fetch(
-        'https://api.github.com/repos/tajmirul/portfolio-2.0',
-        {
-            next: {
-                revalidate: 60 * 60, // 1 hour
-            },
-        },
-    );
-
-    const { stargazers_count, forks_count } =
-        (await repoStats.json()) as RepoStats;
-
+const Footer = () => {
     return (
-        <footer className="text-center pb-5" id="contact">
+        <footer className="text-center pb-10" id="footer">
             <div className="container">
-                <p className="text-lg">Have a project in mind?</p>
-                <a
-                    href={`mailto:${GENERAL_INFO.email}`}
-                    className="text-3xl sm:text-4xl font-anton inline-block mt-5 mb-10 hover:underline"
-                >
-                    {GENERAL_INFO.email}
-                </a>
-
-                <div className="">
-                    <a
-                        href="https://github.com/Tajmirul/portfolio-2.0"
-                        target="_blank"
-                        className="leading-none text-muted-foreground hover:underline hover:text-white"
-                    >
-                        Design & built by Tajmirul Islam
-                        <div className="flex items-center justify-center gap-5 pt-1">
-                            <span className="flex items-center gap-2">
-                                <Star size={18} /> {stargazers_count}
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <GitFork size={18} /> {forks_count}
-                            </span>
+                <div className="pt-8 border-t border-muted-foreground/20">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <p className="text-muted-foreground text-sm order-2 md:order-1">
+                            Built by <span className="text-foreground font-medium">{GENERAL_INFO.name}</span> &copy; {new Date().getFullYear()}
+                        </p>
+                        
+                        <div className="flex gap-6 order-1 md:order-2">
+                            {SOCIAL_LINKS.map((link) => (
+                                <a 
+                                    key={link.name}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium"
+                                >
+                                    {link.name}
+                                </a>
+                            ))}
                         </div>
-                    </a>
-
-                    {/* Note: If you are not Tajmirul, use this copyright message instead */}
-                    {/* <a href='https://www.me.toinfinite.dev/' className="leading-none text-muted-foreground hover:underline hover:text-white">
-                        Design & built by Tajmirul Islam <br />
-                        Revised by YOUR NAME
-
-                        <div className="flex items-center justify-center gap-5 pt-1">
-                            <span className='flex items-center gap-2'>
-                                <Star size={14} /> {stargazers_count}
-                            </span>
-                            <span className='flex items-center gap-2'>
-                                <GitFork size={14} /> {forks_count}
-                            </span>
-                        </div>
-                    </a> */}
+                    </div>
+                    <p className="text-muted-foreground/50 text-[10px] mt-8 uppercase tracking-[0.2em]">
+                        Inspired by Tajmirul Islam&apos;s Design
+                    </p>
                 </div>
             </div>
         </footer>

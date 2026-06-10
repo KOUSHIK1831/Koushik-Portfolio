@@ -1,308 +1,289 @@
-import { IProject } from '@/types';
+import { IProject, IExperience, IHackathon, ICertification } from '@/types';
 
 export const GENERAL_INFO = {
-    email: 'tasmirolislam@gmail.com',
+    name: 'Banuri Koushik Reddy',
+    role: 'AI Engineer | Software Developer',
+    email: 'koushikreddybanuri@gmail.com',
+    resumeUrl: '#', // User to update with actual link
+    githubUrl: 'https://github.com/KOUSHIK1831',
+    linkedinUrl: 'https://www.linkedin.com/in/koushik-reddy-banuri-694543306',
+    gitlabUrl: 'https://gitlab.com/koushik_18',
+    swechaUrl: 'https://code.swecha.org/koushik_18',
 
     emailSubject: "Let's collaborate on a project",
-    emailBody: 'Hi Tajmirul, I am reaching out to you because...',
-
-    oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/tajmirul',
+    emailBody: 'Hi Koushik, I am reaching out to you because...',
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/Tajmirul' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/tajmirul' },
-    { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
+    { name: 'github', url: GENERAL_INFO.githubUrl },
+    { name: 'linkedin', url: GENERAL_INFO.linkedinUrl },
+    { name: 'gitlab', url: GENERAL_INFO.gitlabUrl },
+    { name: 'swecha', url: GENERAL_INFO.swechaUrl },
+];
+
+export const DEVELOPER_PROFILES = [
+    {
+        name: 'GitHub',
+        url: GENERAL_INFO.githubUrl,
+        description: 'Check out my repositories, AI projects, and open-source contributions.',
+        icon: 'github'
+    },
+    {
+        name: 'GitLab',
+        url: GENERAL_INFO.gitlabUrl,
+        description: 'Explore my CI/CD pipelines and collaborative enterprise-style projects.',
+        icon: 'gitlab'
+    },
+    {
+        name: 'Swecha Code',
+        url: GENERAL_INFO.swechaUrl,
+        description: 'View my contributions to the free software movement and local community projects.',
+        icon: 'code'
+    }
 ];
 
 export const MY_STACK = {
-    frontend: [
-        {
-            name: 'JavaScript',
-            icon: '/logo/js.png',
-        },
-        {
-            name: 'TypeScript',
-            icon: '/logo/ts.png',
-        },
-        {
-            name: 'React',
-            icon: '/logo/react.png',
-        },
-        {
-            name: 'Next.js',
-            icon: '/logo/next.png',
-        },
-        {
-            name: 'Redux',
-            icon: '/logo/redux.png',
-        },
-        {
-            name: 'Tailwind CSS',
-            icon: '/logo/tailwind.png',
-        },
-        {
-            name: 'GSAP',
-            icon: '/logo/gsap.png',
-        },
-        {
-            name: 'Framer Motion',
-            icon: '/logo/framer-motion.png',
-        },
-        {
-            name: 'Sass',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
-        },
+    programming: [
+        { name: 'Python', icon: '/logo/ts.png' }, 
+        { name: 'Java', icon: '/logo/js.png' },
+        { name: 'C', icon: '/logo/ts.png' },
     ],
-    backend: [
-        {
-            name: 'Node.js',
-            icon: '/logo/node.png',
-        },
-        {
-            name: 'NestJS',
-            icon: '/logo/nest.svg',
-        },
-        {
-            name: 'Express.js',
-            icon: '/logo/express.png',
-        },
+    'AI & Machine Learning': [
+        { name: 'Machine Learning', icon: '/logo/gsap.png' },
+        { name: 'Prompt Engineering', icon: '/logo/framer-motion.png' },
+        { name: 'LLMs', icon: '/logo/next.png' },
+        { name: 'RAG', icon: '/logo/react.png' },
+        { name: 'Sentence Transformers', icon: '/logo/redux.png' },
     ],
-    database: [
-        {
-            name: 'MySQL',
-            icon: '/logo/mysql.svg',
-        },
-        {
-            name: 'PostgreSQL',
-            icon: '/logo/postgreSQL.png',
-        },
-        {
-            name: 'MongoDB',
-            icon: '/logo/mongodb.svg',
-        },
-        {
-            name: 'Prisma',
-            icon: '/logo/prisma.png',
-        },
+    'Core Computer Science': [
+        { name: 'OOP', icon: '/logo/node.png' },
+        { name: 'DSA', icon: '/logo/nest.svg' },
+        { name: 'DBMS', icon: '/logo/mysql.svg' },
+        { name: 'Computer Networks', icon: '/logo/postgreSQL.png' },
+        { name: 'Cloud Computing', icon: '/logo/aws.png' },
+    ],
+    cloud: [
+        { name: 'AWS', icon: '/logo/aws.png' },
+        { name: 'Azure AI', icon: '/logo/ts.png' },
+        { name: 'Amazon EC2', icon: '/logo/aws.png' },
+        { name: 'Amazon S3', icon: '/logo/aws.png' },
+    ],
+    'Web & Visualization': [
+        { name: 'HTML', icon: '/logo/ts.png' },
+        { name: 'CSS', icon: '/logo/sass.png' },
+        { name: 'Power BI', icon: '/logo/ts.png' },
+        { name: 'Tableau', icon: '/logo/ts.png' },
     ],
     tools: [
-        {
-            name: 'Git',
-            icon: '/logo/git.png',
-        },
-        {
-            name: 'Docker',
-            icon: '/logo/docker.svg',
-        },
-        {
-            name: 'AWS',
-            icon: '/logo/aws.png',
-        },
+        { name: 'Git', icon: '/logo/git.png' },
+        { name: 'GitHub', icon: '/logo/github.png' },
+        { name: 'GitLab', icon: '/logo/ts.png' },
+        { name: 'VS Code', icon: '/logo/ts.png' },
+        { name: 'Bruno', icon: '/logo/ts.png' },
     ],
 };
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'Electro EV',
-        slug: 'electro-ev',
-        liveUrl: 'https://electroev.co.uk/',
+        title: 'CampusGuide – AI Academic Assistant',
+        slug: 'campus-guide',
         year: 2025,
+        liveUrl: 'https://huggingface.co/spaces/bhaskar-2/college',
+        sourceCode: 'https://github.com/KOUSHIK1831/CampusGuide',
         description: `
-      A complete agency portfolio platform built for Electro EV to showcase their services, blog content, and product offerings. <br/> <br/>
+      A hallucination-safe Retrieval-Augmented Generation (RAG) application designed to deliver accurate, document-grounded responses for university policies and academic regulations. <br/><br/>
       
       Key Features:<br/>
       <ul>
-        <li>🛠️ Service Display System: Interactive service showcase with synchronized sliders</li>
-        <li>✍️ Blog Management: SEO-friendly blog with categorization and search</li>
-        <li>🛒 Product Catalog: Organized product display with filtering capabilities</li>
-        <li>📱 Fully Responsive: Optimized for all device sizes</li>
-        <li>⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)</li>
-      </ul><br/>
-      
-      Technical Highlights:
-      <ul>
-        <li>Implemented complex slider synchronization logic using Swiper.js</li>
-        <li>Customized Payload CMS admin panel for intuitive content management</li>
-        <li>Developed reusable UI components with shadcn for design consistency</li>
-        <li>Configured efficient data fetching strategies in Next.js</li>
+        <li>🛡️ <b>Hallucination-Safe AI:</b> Implemented a Retrieval Gate with minimum similarity thresholds to ensure responses are strictly grounded in official documents.</li>
+        <li>🔐 <b>Role-Based Intelligence:</b> Tailored document access and responses for students, faculty, coordinators, and parents.</li>
+        <li>🔎 <b>FAISS Vector Search:</b> Leverages FAISS and Sentence-Transformer embeddings for high-speed, semantic document retrieval.</li>
+        <li>📜 <b>Source Traceability:</b> Provides explicit citations including document names and page numbers for every generated answer.</li>
+        <li>⚡ <b>Powered by Groq:</b> Utilizes Llama-3.1-8b via Groq for high-speed inference with low temperature settings for factual accuracy.</li>
       </ul>
       `,
-        role: `
-      Full-Stack Developer <br/>
-      Owned the entire development lifecycle:
-      <ul>
-        <li>✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products</li>
-        <li>🎨 Frontend: Built all UI components using Tailwind CSS and shadcn</li>
-        <li>🔄 State Management: Implemented client-side data fetching and caching</li>
-        <li>🖥️ CMS Customization: Created admin interfaces for content editors</li>
-        <li>🚀 Deployment: Set up CI/CD pipeline for Vercel hosting</li>
-        <li>🧩 Third-Party Integration: Added Swiper.js for interactive sliders</li>
-      </ul>
-      `,
+        role: `AI Developer - Built the complete RAG pipeline, including document ingestion, vector storage, and the Streamlit-based UI.`,
         techStack: [
-            'Next.js',
-            'Payload CMS',
-            'Tailwind CSS',
-            'shadcn',
-            'Swiper.js',
-            'React Hook Form',
-            'Vercel',
+            'RAG',
+            'Streamlit',
+            'Groq LLM',
+            'FAISS',
+            'Sentence Transformers',
+            'Python',
+            'NLP',
         ],
         thumbnail: '/projects/thumbnail/mti-electronics.webp',
         longThumbnail: '/projects/long/mti-electronics.webp',
-        images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
-        ],
+        images: ['/projects/images/mti-electronics-1.webp'],
     },
     {
-        title: 'Epikcart',
-        slug: 'epikcart',
-        techStack: [
-            'React',
-            'Redux',
-            'React i18n',
-            'Tailwind CSS',
-            'Framer Motion',
-            'debouncing',
-            'Api Integration',
-        ],
+        title: 'Debugger – Custom Coding Agent',
+        slug: 'debugger',
+        year: 2025,
+        sourceCode: 'https://github.com/KOUSHIK1831/Debugger',
+        description: `
+      A custom-built AI coding agent designed to analyze, diagnose, and fix coding errors with a structured, senior-engineering-focused approach. <br/><br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>🎯 <b>Strict Response Contract:</b> Produces deterministic, review-friendly outputs instead of free-form answers.</li>
+        <li>🧩 <b>Context-Aware Diagnosis:</b> Behaves like a senior engineer, analyzing the full project context before suggesting fixes.</li>
+        <li>⚡ <b>Model Optimization:</b> Configured using Grok Code Fast 1 with a low temperature (0.2) for high reliability.</li>
+        <li>🏆 <b>Hackathon Project:</b> Developed for the "AI Agents Hackathon" to showcase advanced prompt engineering skills.</li>
+      </ul>
+      `,
+        role: `Lead Developer & Prompt Engineer - Designed the response contract and agent logic for structured error resolution.`,
+        techStack: ['Grok Code Fast 1', 'Python', 'Prompt Engineering', 'LLMs', 'AI Agents'],
         thumbnail: '/projects/thumbnail/epikcart.jpg',
         longThumbnail: '/projects/long/epikcart.jpg',
-        images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
-        ],
-        liveUrl: 'https://demo.epikcart.siphertech.com/',
-        year: 2023,
-        description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the frontend developer in a team of five, I: <br/>
-        - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
-        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
-        - Integrated multi-language support with React i18n, including RTL handling.<br/>
-        - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
+        images: ['/projects/images/epikcart-1.png'],
     },
     {
-        title: 'Resume Roaster',
-        slug: 'resume-roaster',
+        title: 'Continuous Data Profiling For Interactive Data Science',
+        slug: 'continuous-data-profiling',
+        year: 2024,
+        sourceCode: 'https://github.com/KOUSHIK1831/Continuous-Data-Profiling-For-Interactive-Data-Science',
+        description: `
+      An end-to-end machine learning pipeline for California housing price analysis, integrating continuous data profiling and drift detection for robust data science workflows. <br/><br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>📊 <b>Automated Data Profiling:</b> Generates comprehensive statistical reports using ydata-profiling for deep data insights.</li>
+        <li>🛠️ <b>Advanced Preprocessing:</b> Sophisticated handling of missing values, normalization, and categorical encoding.</li>
+        <li>🔬 <b>Feature Engineering:</b> Derived complex metrics like RoomsPerHousehold and PopulationPerHousehold to boost model accuracy.</li>
+        <li>🚨 <b>Drift Monitoring:</b> Implemented KS-tests for Data Drift and R² comparison for Concept Drift detection.</li>
+        <li>🖥️ <b>Interactive Dashboard:</b> Built with ipywidgets for real-time feature exploration and model evaluation.</li>
+      </ul>
+      `,
+        role: `ML Engineer - Developed the complete pipeline from profiling to drift monitoring and interactive visualization.`,
         techStack: [
-            'GPT-4',
-            'Next.js',
-            'Postgressql',
-            'Prisma',
-            'Tailwind CSS',
+            'Python',
+            'Scikit-Learn',
+            'ydata-profiling',
+            'Pandas',
+            'NumPy',
+            'Random Forest',
+            'ipywidgets',
         ],
         thumbnail: '/projects/thumbnail/resume-roaster.jpg',
         longThumbnail: '/projects/long/resume-roaster.jpg',
-        images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
-        ],
-        liveUrl: 'https://resume-roaster.vercel.app/',
-        year: 2023,
-        description:
-            'Resume Roaster is a web application designed to provide tailored resume feedback and professional writing services. Built with Next.js, PostgreSQL, Prisma, and Tailwind CSS, it integrates GPT-4 for AI-powered recommendations. The platform also includes peer-to-peer reviews with a points-based system, fostering a collaborative and engaging experience. Targeting freshers, experienced professionals, and programmers, it helps optimize resumes for job-specific success.',
-        role: `As the sole developer and business owner, I:<br/>
-        - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
-        - Integrated GPT-4 for AI-driven feedback and insights.<br/>
-        - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
+        images: ['/projects/images/resume-roaster-1.png'],
     },
     {
-        title: 'Real Estate',
-        slug: 'property-pro',
+        title: 'Collision Guard – Autonomous Vehicle Risk Prediction',
+        slug: 'collision-guard',
+        year: 2024,
+        sourceCode: 'https://github.com/KOUSHIK1831/Collision-Guard-Autonomous-Vehicle-Risk-Prediction',
+        description: `
+      A machine learning-based system designed to predict collision risk in autonomous vehicles using driving telemetry, environmental data, and sensor-based features. <br/><br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>🛡️ <b>Proactive Safety:</b> Enables real-time risk assessment and proactive safety decisions for autonomous driving systems.</li>
+        <li>⚖️ <b>Class Imbalance Handling:</b> Utilized SMOTE (Synthetic Minority Oversampling Technique) to balance collision vs. non-collision datasets for reliable prediction.</li>
+        <li>🌳 <b>Random Forest Excellence:</b> Leverages Random Forest Classifier for its ability to handle nonlinear driving data and provide feature importance insights.</li>
+        <li>📡 <b>Multi-Sensor Integration:</b> Analyzes vehicle speed, distance to objects, traffic density, and weather conditions for holistic risk estimation.</li>
+        <li>👥 <b>Group Research:</b> Developed as part of an academic ML research initiative with a team of four.</li>
+      </ul>
+      `,
+        role: `ML Developer & Team Member - Conducted EDA, implemented SMOTE for data balancing, and optimized the Random Forest model.`,
         techStack: [
-            'React.js',
-            'Redux',
-            'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
+            'Python',
+            'Scikit-learn',
+            'Random Forest',
+            'SMOTE',
+            'Pandas',
+            'Matplotlib',
+            'Seaborn',
         ],
         thumbnail: '/projects/thumbnail/property-pro.jpg',
         longThumbnail: '/projects/long/property-pro.jpg',
-        images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
-        ],
-        liveUrl: 'https://demo.propertypro.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
+        images: ['/projects/images/property-pro-1.png'],
     },
     {
-        title: 'Consulting Finance',
-        slug: 'crenotive',
-        techStack: ['HTML', 'CSS & SCSS', 'Javascript', 'Bootstrap'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
+        title: 'SnapShop AI — Digitize Your Store',
+        slug: 'snapshop-ai',
+        year: 2025,
+        liveUrl: 'https://apna-bazar-cs.vercel.app',
+        sourceCode: 'https://github.com/KOUSHIK1831/ApnaBazar',
+        description: `
+      An AI-powered digitization platform that empowers local clothing sellers to create shareable online storefronts in under 2 minutes using vision-AI. <br/><br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>🤖 <b>AI Product Digitization:</b> Uses Gemini 2.5 Flash to automatically extract titles, descriptions, prices, and categories from product photos.</li>
+        <li>💬 <b>WhatsApp Sales Agent:</b> Autonomous Claude 3.5 Sonnet agent that handles product queries and places orders via WhatsApp.</li>
+        <li>📱 <b>Instant Storefront:</b> Every seller gets a customizable, shareable public URL with real-time stock management and order tracking.</li>
+        <li>👤 <b>HITL Review:</b> Human-in-the-Loop interface for sellers to verify and edit AI-extracted details before publishing.</li>
+        <li>🌍 <b>Multi-language Support:</b> Fully localized in English, Hindi (हिन्दी), and Telugu (తెలుగు) for broad market accessibility.</li>
+      </ul>
+      `,
+        role: `Full-Stack AI Developer - Architected the entire platform, including the AI extraction pipeline, Supabase backend, and multilingual frontend.`,
+        techStack: [
+            'React',
+            'TypeScript',
+            'Supabase',
+            'Gemini 2.5 Flash',
+            'Claude 3.5 Sonnet',
+            'Tailwind CSS',
+            'Capacitor',
         ],
-        sourceCode: 'https://github.com/Tajmirul/crenotive',
-        liveUrl: 'https://crenotive.netlify.app/',
-        year: 2023,
-        description:
-            'I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements.',
-        role: ``,
-    },
-    {
-        title: 'devLinks',
-        slug: 'devLinks',
-        techStack: ['Next.js', 'Formik', 'Drag & Drop', 'Tailwind CSS'],
-        thumbnail: '/projects/thumbnail/devLinks.jpg',
-        longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/devsLink',
-        liveUrl: 'https://devlinks-demo.vercel.app/auth/signin',
-        year: 2023,
-        description: `One of the most challenging projects in Frontend Mentor.<br/><br/>
-
-            I developed a LinkSharing App as part of the Frontend Mentor challenge, utilizing React, Redux, and Tailwind CSS to create a responsive and feature-rich platform. The app allows users to share, save, and explore links, with a focus on intuitive design and smooth navigation. Advanced state management ensures efficient data handling for user interactions.`,
-        role: ``,
+        thumbnail: '/projects/thumbnail/epikcart.jpg',
+        longThumbnail: '/projects/long/epikcart.jpg',
+        images: ['/projects/images/epikcart-2.png'],
     },
 ];
 
-export const MY_EXPERIENCE = [
+export const MY_EXPERIENCE: IExperience[] = [
     {
-        title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        title: 'AI Intern',
+        company: 'Viswam AI | IIIT Hyderabad',
+        duration: 'Jan 2026 - Present',
+        description: [
+            'Built AI-powered applications using LLMs',
+            'Developed a Groq-powered coding assistant',
+            'Created a RAG-based Campus Guide using institutional documents',
+            'Used Sentence Transformers and Groq LLMs',
+            'Performed API discovery and testing with Bruno',
+            'Followed GitOps-style version control workflows',
+        ],
     },
     {
-        title: 'Frontend Developer',
-        company: 'Epikcoders',
-        duration: 'Oct 2023 - Nov 2024',
+        title: 'Digital Marketing Intern',
+        company: '3ZEN Consulting Private Limited',
+        duration: 'June 2024 - July 2024',
+        description: [
+            'SEO optimization and SEM campaigns',
+            'Audience targeting and Geo-targeted marketing',
+            'Social media analytics',
+        ],
+    },
+];
+
+export const HACKATHONS: IHackathon[] = [
+    {
+        name: 'AI Agents Hackathon',
+        project: 'Prompt-Engineered Coding Agent',
+        description: 'Built an agent to automate error analysis and fixes.',
     },
     {
-        title: 'Frontend Engineer',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
+        name: 'RAG Hackathon',
+        project: 'CampusGuide',
+        description: 'Developed a document-grounded academic assistant.',
+    },
+];
+
+export const CERTIFICATIONS: ICertification[] = [
+    {
+        name: 'AWS Academy Cloud Foundations',
+        issuer: 'AWS Academy',
     },
     {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
+        name: 'Microsoft Azure AI Fundamentals',
+        issuer: 'Microsoft',
+    },
+    {
+        name: 'GitLab CI Fundamentals',
+        issuer: 'GitLab',
     },
 ];
