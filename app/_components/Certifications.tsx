@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useRef } from 'react';
-import { Award } from 'lucide-react';
+import { Award, ArrowUpRight } from 'lucide-react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -50,16 +50,48 @@ const Certifications = () => {
                                 <Award size={80} />
                             </div>
                             
-                            <div className="relative z-10">
-                                <div className="mb-4 inline-block p-3 rounded-lg bg-primary/10 text-primary">
-                                    <Award size={28} />
+                            <div className="relative z-10 flex flex-col h-full justify-between">
+                                <div>
+                                    <div className="mb-4 inline-block p-3 rounded-lg bg-primary/10 text-primary">
+                                        <Award size={28} />
+                                    </div>
+                                    <h3 className="text-2xl font-anton uppercase leading-tight mb-2">
+                                        {cert.name}
+                                    </h3>
+                                    <p className="text-muted-foreground text-sm">
+                                        Issued by {cert.issuer}
+                                    </p>
                                 </div>
-                                <h3 className="text-2xl font-anton uppercase leading-tight mb-2">
-                                    {cert.name}
-                                </h3>
-                                <p className="text-muted-foreground">
-                                    Issued by {cert.issuer}
-                                </p>
+
+                                {cert.link && (
+                                    <a
+                                        href={cert.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary hover:text-emerald-400 transition-colors w-fit"
+                                    >
+                                        View Certificate <ArrowUpRight size={14} />
+                                    </a>
+                                )}
+
+                                {cert.links && (
+                                    <div className="mt-6 space-y-2">
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Credentials:</p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {cert.links.map((subLink, subIdx) => (
+                                                <a
+                                                    key={subIdx}
+                                                    href={subLink.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-1 px-2 py-1 rounded bg-muted/60 text-[11px] font-medium text-foreground border border-muted-foreground/10 hover:border-primary/30 hover:bg-muted transition-all"
+                                                >
+                                                    {subLink.label} <ArrowUpRight size={10} />
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                             
                             <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary transition-all duration-500 group-hover:w-full" />

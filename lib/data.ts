@@ -51,14 +51,10 @@ export const MY_SKILLS = [
     { name: 'Streamlit', icon: '/logo/js.png' },
     { name: 'Capacitor', icon: '/logo/js.png' },
     { name: 'Vite', icon: '/logo/js.png' },
-    { name: 'Python (FastAPI)', icon: '/logo/node.png' },
+    { name: 'Python', icon: '/logo/node.png' },
     { name: 'Supabase', icon: '/logo/postgreSQL.png' },
     { name: 'Edge Functions', icon: '/logo/node.png' },
-    { name: 'WebSocket', icon: '/logo/node.png' },
-    { name: 'Alembic', icon: '/logo/postgreSQL.png' },
-    { name: 'PostgreSQL', icon: '/logo/postgreSQL.png' },
-    { name: 'PostGIS', icon: '/logo/postgreSQL.png' },
-    { name: 'MinIO / S3', icon: '/logo/aws.png' },
+    { name: 'AWS', icon: '/logo/aws.png' },
     { name: 'RAG', icon: '/logo/node.png' },
     { name: 'Scikit-Learn', icon: '/logo/node.png' },
     { name: 'Pandas & NumPy', icon: '/logo/js.png' },
@@ -67,8 +63,7 @@ export const MY_SKILLS = [
     { name: 'Docker', icon: '/logo/docker.svg' },
     { name: 'Git', icon: '/logo/git.png' },
     { name: 'Vitest & Playwright', icon: '/logo/js.png' },
-    { name: 'Bun & UV', icon: '/logo/js.png' },
-    { name: 'PostHog', icon: '/logo/js.png' },
+    { name: 'DX', icon: '/logo/git.png' },
 ];
 
 export const PROJECTS: IProject[] = [
@@ -428,6 +423,7 @@ export const MY_EXPERIENCE: IExperience[] = [
         company: 'Viswam AI | IIIT Hyderabad',
         duration: 'Jan 2026 - Present',
         description: [
+            'Contributed Projects: 16 | Issues: 28 | MRs: 54 | Total Commits: 529',
             'Built AI-powered applications using LLMs',
             'Developed a Groq-powered coding assistant',
             'Created a RAG-based Campus Guide using institutional documents',
@@ -438,13 +434,18 @@ export const MY_EXPERIENCE: IExperience[] = [
     },
     {
         title: 'Digital Marketing Intern',
-        company: '3ZEN Consulting Private Limited',
+        company: '3ZEN Consulting Private Limited | Madhapur, Hyderabad',
         duration: 'June 2024 - July 2024',
         description: [
-            'SEO optimization and SEM campaigns',
-            'Audience targeting and Geo-targeted marketing',
-            'Social media analytics',
+            'Improved website SEO, keyword ranking, and backlinks optimization',
+            'Worked on SEM and social media campaigns for brand awareness',
+            'Applied GEO-targeting strategies for regional marketing optimization',
+            'Increased brand reach and engagement using data-driven strategies',
+            'Applied data analysis and basic automation to optimize SEO, track campaign performance, and improve audience engagement',
+            '🏆 Earned Grade A for outstanding performance',
         ],
+        certificateUrl: 'https://drive.google.com/file/d/1BhYkEbDgrdn3_2ZYdZ0ZOukNhJzbpPXH/view?usp=sharing',
+        certificateText: 'View Certificate',
     },
 ];
 
@@ -463,15 +464,27 @@ export const HACKATHONS: IHackathon[] = [
 
 export const CERTIFICATIONS: ICertification[] = [
     {
-        name: 'AWS Academy Cloud Foundations',
-        issuer: 'AWS Academy',
+        name: 'AWS Academy Graduate - Cloud Foundations',
+        issuer: 'Amazon Web Services',
+        link: 'https://drive.google.com/file/d/1jbRI6g_k_7dNFqNpJZRO3JBv9oB8T7mK/view?usp=sharing',
     },
     {
-        name: 'Microsoft Azure AI Fundamentals',
+        name: 'Azure AI Fundamentals - AI-900',
         issuer: 'Microsoft',
+        link: 'https://drive.google.com/file/d/1sFQqp7QZC01CXPrPioOl7AOdxs85yfAo/view',
     },
     {
-        name: 'GitLab CI Fundamentals',
-        issuer: 'GitLab',
+        name: 'Data Analysis & Visualization - SSC NASSCOM Certification',
+        issuer: 'NASSCOM',
+        links: [
+            { label: 'Acquiring Data', url: 'https://drive.google.com/file/d/1kzfB8ivnfdo_InLJOBnwPnUi9hikpg6L/view?usp=sharing' },
+            { label: 'Exploratory Data Analysis', url: 'https://drive.google.com/file/d/1BTgjnP68nJdJ-v6UwrPBWiMh089ouMNj/view?usp=sharing' },
+            { label: 'Data Visualization', url: 'https://drive.google.com/file/d/19s6MIFwpzNYEs0rOfQUfFBgC9J0V5FSR/view?usp=sharing' },
+        ],
+    },
+    {
+        name: 'Python Programming - Python Basics & Intro to Programming',
+        issuer: 'Kaggle',
+        link: 'https://drive.google.com/file/d/1A_f-bTCfUCohKT70ZGcF3kJK631mBBYm/view?usp=sharing',
     },
 ];

@@ -118,9 +118,6 @@ const InternshipContributions = () => {
                     <h2 className="contrib-header-el opacity-0 text-4xl sm:text-5xl md:text-6xl font-anton uppercase tracking-tight leading-none text-foreground">
                         My <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-400">Contributions</span>
                     </h2>
-                    <p className="contrib-header-el opacity-0 text-sm sm:text-base text-muted-foreground">
-                        Click any card to explore the full list, grouped by project.
-                    </p>
                 </div>
 
                 {/* Cards Grid */}

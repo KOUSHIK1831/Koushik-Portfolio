@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useRef } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -67,16 +68,28 @@ const Experiences = () => {
                                     {item.company}
                                 </p>
                             </div>
-                            <div className="md:col-span-8">
-                                <p className="text-4xl sm:text-5xl font-anton leading-none mb-4 uppercase">
-                                    {item.title}
-                                </p>
-                                {item.description && (
-                                    <ul className="list-disc list-outside ml-5 space-y-2 text-muted-foreground text-lg">
-                                        {item.description.map((desc, i) => (
-                                            <li key={i}>{desc}</li>
-                                        ))}
-                                    </ul>
+                            <div className="md:col-span-8 flex flex-col justify-between">
+                                <div>
+                                    <p className="text-4xl sm:text-5xl font-anton leading-none mb-4 uppercase">
+                                        {item.title}
+                                    </p>
+                                    {item.description && (
+                                        <ul className="list-disc list-outside ml-5 space-y-2 text-muted-foreground text-lg">
+                                            {item.description.map((desc, i) => (
+                                                <li key={i}>{desc}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                                {item.certificateUrl && (
+                                    <a
+                                        href={item.certificateUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary hover:text-emerald-400 transition-colors w-fit"
+                                    >
+                                        {item.certificateText || 'View Certificate'} <ArrowUpRight size={14} />
+                                    </a>
                                 )}
                             </div>
                         </div>

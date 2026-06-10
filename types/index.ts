@@ -34,6 +34,8 @@ export interface IExperience {
     company: string;
     duration: string;
     description?: string[];
+    certificateUrl?: string;
+    certificateText?: string;
 }
 
 export interface IHackathon {
@@ -46,6 +48,7 @@ export interface ICertification {
     name: string;
     issuer: string;
     link?: string;
+    links?: { label: string; url: string }[];
 }
 
 export type MRStatus = 'merged' | 'opened' | 'closed';
