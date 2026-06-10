@@ -1,6 +1,6 @@
 'use client';
 import SectionTitle from '@/components/SectionTitle';
-import { MY_STACK } from '@/lib/data';
+import { MY_SKILLS } from '@/lib/data';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -32,7 +32,7 @@ const Skills = () => {
                 opacity: 0,
                 y: 40,
                 ease: 'none',
-                stagger: 0.4,
+                stagger: 0.1,
             });
         },
         { scope: containerRef },
@@ -58,79 +58,28 @@ const Skills = () => {
     );
 
     return (
-        <section id="my-stack" ref={containerRef}>
+        <section id="my-skills" ref={containerRef}>
             <div className="container">
-                <SectionTitle title="My Stack" />
+                <SectionTitle title="My Skills" />
 
-                <div className="space-y-20">
-                    {Object.entries(MY_STACK).map(([key, value]) => (
-                        <div className="grid sm:grid-cols-12" key={key}>
-                            <div className="sm:col-span-5">
-                                <p className="slide-up text-5xl font-anton leading-none text-muted-foreground uppercase">
-                                    {key}
-                                </p>
+                <div className="flex gap-x-11 gap-y-12 flex-wrap justify-center mt-10">
+                    {MY_SKILLS.map((item) => (
+                        <div
+                            className="slide-up flex gap-3.5 items-center leading-none"
+                            key={item.name}
+                        >
+                            <div>
+                                <Image
+                                    src={item.icon}
+                                    alt={item.name}
+                                    width="40"
+                                    height="40"
+                                    className="max-h-10"
+                                />
                             </div>
-
-                            <div className="sm:col-span-7 flex gap-x-11 gap-y-9 flex-wrap">
-                                {value.map((item) => (
-                                    <div
-                                        className="slide-up flex gap-3.5 items-center leading-none"
-                                        key={item.name}
-                                    >
-                                        <div>
-                                            <Image
-                                                src={item.icon}
-                                                alt={item.name}
-                                                width="40"
-                                                height="40"
-                                                className="max-h-10"
-                                            />
-                                        </div>
-                                        <span className="text-2xl capitalize">
-                                            {item.name}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-
-    return (
-        <section id="my-stack" ref={containerRef}>
-            <div className="container">
-                <SectionTitle title="My Stack" />
-
-                <div className="space-y-20">
-                    {Object.entries(MY_STACK).map(([key, value]) => (
-                        <div className="grid sm:grid-cols-12" key={key}>
-                            <div className="sm:col-span-5">
-                                <p className="slide-up text-5xl font-anton leading-none text-muted-foreground uppercase">
-                                    {key}
-                                </p>
-                            </div>
-                            <div className="sm:col-span-7 flex gap-x-11 gap-y-9 flex-wrap">
-                                {value.map((item) => (
-                                    <div
-                                        className="slide-up flex gap-3.5 items-center leading-none"
-                                        key={item.name}
-                                    >
-                                        <Image
-                                            src={item.icon}
-                                            alt={item.name}
-                                            width="40"
-                                            height="40"
-                                            className="h-10"
-                                        />
-                                        <span className="text-2xl capitalize">
-                                            {item.name}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
+                            <span className="text-2xl capitalize">
+                                {item.name}
+                            </span>
                         </div>
                     ))}
                 </div>

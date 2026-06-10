@@ -1,11 +1,11 @@
 import AboutMe from './_components/AboutMe';
 import Banner from './_components/Banner';
+import Community from './_components/Community';
 import Experiences from './_components/Experiences';
+import InternshipContributions from './_components/InternshipContributions';
 import Skills from './_components/Skills';
 import ProjectList from './_components/ProjectList';
-import Hackathons from './_components/Hackathons';
 import Certifications from './_components/Certifications';
-import DeveloperProfile from './_components/DeveloperProfile';
 import ContactCard from './_components/ContactCard';
 
 export default function Home() {
@@ -14,11 +14,11 @@ export default function Home() {
             <Banner />
             <AboutMe />
             <Skills />
-            <DeveloperProfile />
+            <ProjectList />
+            <Community />
+            <InternshipContributions />
             <Experiences />
             <Certifications />
-            <Hackathons />
-            <ProjectList />
             <ContactCard />
         </div>
     );

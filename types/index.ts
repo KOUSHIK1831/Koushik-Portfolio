@@ -47,3 +47,77 @@ export interface ICertification {
     issuer: string;
     link?: string;
 }
+
+export type MRStatus = 'merged' | 'opened' | 'closed';
+
+export interface IMergeRequest {
+    id: number;
+    title: string;
+    role: string;
+    status: MRStatus;
+    date: string;
+    url: string;
+    project: string;
+}
+
+export type IssueStatus = 'opened' | 'closed';
+
+export interface IIssue {
+    id: number;
+    title: string;
+    role: string;
+    status: IssueStatus;
+    date: string;
+    url: string;
+    project: string;
+}
+
+export interface ICommunityStats {
+    totalMRs: number;
+    mergedMRs: number;
+    openMRs: number;
+    closedMRs: number;
+    totalIssues: number;
+    openIssues: number;
+    closedIssues: number;
+}
+
+export interface ICommunityMetric {
+    label: string;
+    value: number;
+    description: string;
+}
+
+export interface ICommunityHighlight {
+    project: string;
+    description: string;
+    link: string;
+    type: 'MR' | 'Issue';
+    status: string;
+    date: string;
+}
+
+export interface IProjectInfo {
+    slug: string;
+    name: string;
+    description: string;
+    category: string;
+    projectUrl?: string;
+    allMRsUrl?: string;
+    accentColor: string;
+}
+
+export interface ICategoryGroup {
+    name: string;
+    projects: string[];
+}
+
+export interface ICommunityWork {
+    stats: ICommunityStats;
+    metrics: ICommunityMetric[];
+    mergeRequests: IMergeRequest[];
+    issues: IIssue[];
+    highlights: ICommunityHighlight[];
+    projectInfos: IProjectInfo[];
+    categories: ICategoryGroup[];
+}

@@ -20,6 +20,10 @@ const MENU_LINKS = [
         url: '/',
     },
     {
+        name: 'Skills',
+        url: '/#my-skills',
+    },
+    {
         name: 'About Me',
         url: '/#about-me',
     },
@@ -30,10 +34,6 @@ const MENU_LINKS = [
     {
         name: 'Certifications',
         url: '/#certifications',
-    },
-    {
-        name: 'Hackathons',
-        url: '/#hackathons',
     },
     {
         name: 'Projects',
