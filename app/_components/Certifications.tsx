@@ -17,26 +17,50 @@ const Certifications = () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: containerRef.current,
-                    start: 'top 70%',
-                    end: 'bottom 60%',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
                     toggleActions: 'play none none reverse',
                 },
             });
 
-            tl.from('.cert-card', {
-                y: 60,
+            tl.fromTo(
+                '.cert-card',
+                { y: 60, opacity: 0, scale: 0.9 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    stagger: 0.2,
+                    duration: 0.8,
+                    ease: 'back.out(1.7)',
+                }
+            );
+        },
+        { scope: containerRef },
+    );
+
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: 'bottom 50%',
+                    end: 'bottom 10%',
+                    scrub: 1,
+                },
+            });
+
+            tl.to('.cert-card', {
+                y: -150,
                 opacity: 0,
-                scale: 0.9,
-                stagger: 0.2,
-                duration: 0.8,
-                ease: 'back.out(1.7)',
+                stagger: 0.05,
             });
         },
         { scope: containerRef },
     );
 
     return (
-        <section className="py-section" id="certifications">
+        <section className="pb-section" id="certifications">
             <div className="container" ref={containerRef}>
                 <SectionTitle title="Certifications" />
 

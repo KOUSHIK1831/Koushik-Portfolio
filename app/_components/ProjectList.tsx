@@ -86,10 +86,11 @@ const ProjectList = () => {
                 },
             });
 
-            tl.from(containerRef.current, {
-                y: 150,
-                opacity: 0,
-            });
+            tl.fromTo(
+                containerRef.current,
+                { y: 150, opacity: 0 },
+                { y: 0, opacity: 1 }
+            );
         },
         { scope: containerRef },
     );

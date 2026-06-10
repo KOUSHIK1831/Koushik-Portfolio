@@ -24,11 +24,15 @@ const Experiences = () => {
                 },
             });
 
-            tl.from('.experience-item', {
-                y: 50,
-                opacity: 0,
-                stagger: 0.3,
-            });
+            tl.fromTo(
+                '.experience-item',
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.3,
+                }
+            );
         },
         { scope: containerRef },
     );
@@ -44,16 +48,17 @@ const Experiences = () => {
                 },
             });
 
-            tl.to(containerRef.current, {
+            tl.to('.experience-item', {
                 y: -150,
                 opacity: 0,
+                stagger: 0.1,
             });
         },
         { scope: containerRef },
     );
 
     return (
-        <section className="py-section" id="my-experience">
+        <section className="pb-section" id="my-experience">
             <div className="container" ref={containerRef}>
                 <SectionTitle title="Experience Timeline" />
 

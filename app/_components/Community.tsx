@@ -67,10 +67,11 @@ const Community = () => {
                 },
             });
 
-            tl.from(containerRef.current, {
-                y: 150,
-                opacity: 0,
-            });
+            tl.fromTo(
+                containerRef.current,
+                { y: 150, opacity: 0 },
+                { y: 0, opacity: 1 }
+            );
         },
         { scope: containerRef },
     );
@@ -79,7 +80,7 @@ const Community = () => {
     let lastCategory = '';
 
     return (
-        <section className="py-section" id="community">
+        <section className="pb-section" id="community">
             <div className="container">
                 <SectionTitle title="OPEN SOURCE CONTRIBUTIONS" />
 

@@ -61,9 +61,10 @@ const InternshipContributions = () => {
                 },
             });
 
-            tl.to(sectionRef.current, {
+            tl.to('.contrib-card, .contrib-header-el', {
                 y: -150,
                 opacity: 0,
+                stagger: 0.02,
             });
         },
         { scope: sectionRef }
@@ -104,14 +105,14 @@ const InternshipContributions = () => {
     };
 
     return (
-        <section ref={sectionRef} className="py-section border-t border-muted-foreground/5 bg-background relative overflow-hidden" id="internship-contributions">
+        <section ref={sectionRef} className="pb-section border-t border-muted-foreground/5 bg-background relative overflow-hidden" id="internship-contributions">
             {/* Background subtle glowing circles */}
             <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="container relative z-10">
                 {/* Header Section */}
-                <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <div className="text-left mb-16 space-y-3">
                     <p className="contrib-header-el opacity-0 text-[10px] font-bold tracking-[0.25em] uppercase text-primary">
                         VISWAM AI INTERNSHIP
                     </p>

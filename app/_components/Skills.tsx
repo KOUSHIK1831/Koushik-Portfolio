@@ -28,12 +28,16 @@ const Skills = () => {
                 },
             });
 
-            tl.from('.slide-up', {
-                opacity: 0,
-                y: 40,
-                ease: 'none',
-                stagger: 0.1,
-            });
+            tl.fromTo(
+                '.slide-up',
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    ease: 'none',
+                    stagger: 0.1,
+                }
+            );
         },
         { scope: containerRef },
     );
@@ -49,17 +53,18 @@ const Skills = () => {
                 },
             });
 
-            tl.to(containerRef.current, {
+            tl.to('.slide-up', {
                 y: -150,
                 opacity: 0,
+                stagger: 0.02,
             });
         },
         { scope: containerRef },
     );
 
     return (
-        <section id="my-skills" ref={containerRef}>
-            <div className="container">
+        <section className="pb-section" id="my-skills">
+            <div className="container" ref={containerRef}>
                 <SectionTitle title="My Skills" />
 
                 <div className="flex gap-x-11 gap-y-12 flex-wrap justify-center mt-10">

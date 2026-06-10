@@ -30,24 +30,28 @@ const ContactCard = () => {
 
     useGSAP(
         () => {
-            gsap.from('.contact-card-anim', {
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse',
-                },
-                y: 40,
-                opacity: 0,
-                duration: 1,
-                ease: 'power3.out',
-            });
+            gsap.fromTo(
+                '.contact-card-anim',
+                { y: 40, opacity: 0 },
+                {
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse',
+                    },
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power3.out',
+                }
+            );
         },
         { scope: containerRef },
     );
 
     return (
-        <section className="py-section" id="contact" ref={containerRef}>
-            <div className="container flex justify-center">
+        <section className="pb-section" id="contact">
+            <div className="container flex justify-center" ref={containerRef}>
                 <div className="contact-card-anim w-full max-w-[950px] bg-muted/20 border border-muted-foreground/10 rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center">
                     <div className="md:w-5/12">
                         <h2 className="text-5xl md:text-6xl font-anton uppercase leading-none mb-6">
