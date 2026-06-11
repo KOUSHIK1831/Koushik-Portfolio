@@ -347,8 +347,8 @@ const Banner = () => {
                         <div className="grid grid-cols-3 gap-3">
                             {[
                                 { value: '2+', label: 'Internships' },
-                                { value: '5+', label: 'AI Projects' },
-                                { value: '3+', label: 'Certifications' },
+                                { value: '8+', label: 'AI Projects' },
+                                { value: '6+', label: 'Certifications' },
                             ].map((stat) => (
                                 <div
                                     key={stat.label}

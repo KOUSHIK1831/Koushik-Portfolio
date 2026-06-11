@@ -197,10 +197,7 @@ const ContributionDetails = ({ project, mrs, issues }: Props) => {
                                                 <h4 className="text-sm font-medium leading-snug line-clamp-2 mb-4 group-hover/card:text-primary transition-colors">
                                                     {mr.title}
                                                 </h4>
-                                                <div className="flex items-center justify-between mt-auto">
-                                                    <span className="text-xs text-muted-foreground font-mono">
-                                                        {new Date(mr.date).toLocaleDateString('en-CA')}
-                                                    </span>
+                                                <div className="flex items-center justify-end mt-auto">
                                                     <ArrowUpRight
                                                         size={14}
                                                         className="text-muted-foreground/40 group-hover/card:text-primary group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5 transition-all"
@@ -263,10 +260,7 @@ const ContributionDetails = ({ project, mrs, issues }: Props) => {
                                                 <h4 className="text-sm font-medium leading-snug line-clamp-2 mb-4 group-hover/card:text-primary transition-colors">
                                                     {issue.title}
                                                 </h4>
-                                                <div className="flex items-center justify-between mt-auto">
-                                                    <span className="text-xs text-muted-foreground font-mono">
-                                                        {new Date(issue.date).toLocaleDateString('en-CA')}
-                                                    </span>
+                                                <div className="flex items-center justify-end mt-auto">
                                                     <ArrowUpRight
                                                         size={14}
                                                         className="text-muted-foreground/40 group-hover/card:text-primary group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5 transition-all"

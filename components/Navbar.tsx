@@ -20,24 +20,24 @@ const MENU_LINKS = [
         url: '/',
     },
     {
-        name: 'Skills',
-        url: '/#my-skills',
-    },
-    {
         name: 'About Me',
         url: '/#about-me',
+    },
+    {
+        name: 'Skills',
+        url: '/#my-skills',
     },
     {
         name: 'Experience',
         url: '/#my-experience',
     },
     {
-        name: 'Certifications',
-        url: '/#certifications',
-    },
-    {
         name: 'Projects',
         url: '/#selected-projects',
+    },
+    {
+        name: 'Certifications',
+        url: '/#certifications',
     },
 ];
 

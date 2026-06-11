@@ -92,7 +92,7 @@ const InternshipContributions = () => {
         {
             icon: GitCommit,
             iconBg: 'bg-blue-500/10 text-blue-400',
-            number: '609',
+            number: '611',
             label: 'Total Commits',
         },
     ];

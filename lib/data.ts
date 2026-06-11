@@ -205,10 +205,9 @@ export const PROJECTS: IProject[] = [
         techStack: [
             'React',
             'TypeScript',
-            'Supabase',
+            'Tailwind CSS',
             'Gemini 2.5 Flash',
             'Claude 3.5 Sonnet',
-            'Tailwind CSS',
             'Capacitor',
         ],
         thumbnail: '/projects/thumbnail/epikcart.jpg',
@@ -275,7 +274,6 @@ const MR_DATA: IMergeRequest[] = [
     { id: 32, title: 'unit-test-Backend-API-Routes', role: 'Assigned', status: 'merged', date: '2026-02-08T05:30:46Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-fastapi/-/merge_requests/26', project: 'EHRS Backend' },
     { id: 33, title: 'Resolve "Feature: Enhanced Patient Status Flow Integration"', role: 'Authored & Assigned', status: 'closed', date: '2026-02-05T10:29:46Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-frontend-vite/-/merge_requests/33', project: 'EHRS Frontend' },
     { id: 34, title: 'Draft: Resolve "Feature: Enhanced Patient Status Flow Integration"', role: 'Authored & Assigned', status: 'closed', date: '2026-02-05T08:49:20Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-frontend-vite/-/merge_requests/27', project: 'EHRS Frontend' },
-    { id: 35, title: 'Team AMD- Location-Activated Search for Record Discovery', role: 'Assigned', status: 'opened', date: '2026-01-29T05:22:33Z', url: 'https://code.swecha.org/corpus/corpus-client-app/-/merge_requests/193', project: 'Corpus Client App' },
     { id: 36, title: 'Update Koushik.yml', role: 'Authored', status: 'merged', date: '2026-01-27T10:44:18Z', url: 'https://code.swecha.org/viswam/admin/internships/ehrs-api-collection/-/merge_requests/31', project: 'EHRs API Collection' },
     { id: 37, title: 'feat: add Doctors API collection with auth handling and validation notes', role: 'Authored', status: 'merged', date: '2026-01-27T09:16:37Z', url: 'https://code.swecha.org/viswam/admin/internships/ehrs-api-collection/-/merge_requests/17', project: 'EHRs API Collection' },
     { id: 38, title: 'added roles&categores', role: 'Authored', status: 'merged', date: '2026-01-25T05:30:25Z', url: 'https://code.swecha.org/Mukthanand21/corpus-bruno-collections/-/merge_requests/1', project: 'Corpus Bruno Collections' },
@@ -355,9 +353,9 @@ const CATEGORY_GROUPS: ICategoryGroup[] = [
 
 export const COMMUNITY_CONTRIBUTIONS: ICommunityWork = {
     stats: {
-        totalMRs: 54,
+        totalMRs: 53,
         mergedMRs: 34,
-        openMRs: 7,
+        openMRs: 6,
         closedMRs: 13,
         totalIssues: 28,
         openIssues: 4,
@@ -365,7 +363,7 @@ export const COMMUNITY_CONTRIBUTIONS: ICommunityWork = {
     },
     metrics: [
         { label: 'Total Contributions', value: 82, description: 'Merged MRs and resolved Issues across open-source projects.' },
-        { label: 'Merge Requests', value: 54, description: '34 Merged MRs contributing to Core APIs and Frontend features.' },
+        { label: 'Merge Requests', value: 53, description: '34 Merged MRs contributing to Core APIs and Frontend features.' },
         { label: 'Issues Resolved', value: 28, description: '24 Closed Issues focusing on stability, testing, and UI/UX fixes.' },
         { label: 'Active Projects', value: 8, description: 'Direct contributions to Corpus, EHRS, GitLab Tools, Agri-Tech, and more.' }
     ],
@@ -423,7 +421,7 @@ export const MY_EXPERIENCE: IExperience[] = [
         company: 'Viswam AI | IIIT Hyderabad',
         duration: 'Jan 2026 - Present',
         description: [
-            'Contributed Projects: 16 | Issues: 28 | MRs: 54 | Total Commits: 609',
+            'Contributed Projects: 16 | Issues: 28 | MRs: 53 | Total Commits: 611',
             'Built AI-powered applications using LLMs',
             'Developed a Groq-powered coding assistant',
             'Created a RAG-based Campus Guide using institutional documents',
