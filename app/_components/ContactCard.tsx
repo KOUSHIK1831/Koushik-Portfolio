@@ -73,7 +73,7 @@ const ContactCard = () => {
                             </div>
                             <div className="overflow-hidden">
                                 <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Email</p>
-                                <p className="text-lg font-medium truncate">{GENERAL_INFO.email}</p>
+                                <p className="text-lg font-medium truncate">Send a message</p>
                             </div>
                         </a>
 

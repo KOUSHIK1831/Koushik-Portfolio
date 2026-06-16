@@ -159,7 +159,7 @@ const Navbar = () => {
                 <div className="w-full max-w-[300px] mx-8 sm:mx-auto">
                     <p className="text-muted-foreground mb-4">GET IN TOUCH</p>
                     <a href={`mailto:${GENERAL_INFO.email}`}>
-                        {GENERAL_INFO.email}
+                        Get in touch
                     </a>
                 </div>
             </div>

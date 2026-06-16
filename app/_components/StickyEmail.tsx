@@ -19,7 +19,7 @@ const StickyEmail = () => {
                     writingMode: 'vertical-rl',
                 }}
             >
-                {GENERAL_INFO.email}
+                Get in touch
             </a>
         </div>
     );
