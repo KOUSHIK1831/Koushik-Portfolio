@@ -1,4 +1,4 @@
-import { GENERAL_INFO, SOCIAL_LINKS } from '@/lib/data';
+import { GENERAL_INFO } from '@/lib/data';
 
 const Footer = () => {
     return (
