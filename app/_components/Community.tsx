@@ -49,12 +49,6 @@ const Community = () => {
         return ordered;
     }, [categories, projectData]);
 
-    const uniqueRepoCount = useMemo(() => {
-        const set = new Set<string>();
-        mergeRequests.forEach(mr => set.add(mr.project));
-        return set.size;
-    }, [mergeRequests]);
-
     useGSAP(
         () => {
             const tl = gsap.timeline({

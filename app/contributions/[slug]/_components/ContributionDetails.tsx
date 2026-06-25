@@ -139,8 +139,6 @@ const ContributionDetails = ({ project, mrs, issues }: Props) => {
                                 .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
                                 .map((mr) => {
                                     const mrNum = extractMRNumber(mr.url);
-                                    const config = statusConfig[mr.status] || statusConfig.opened;
-                                    const StatusIcon = config.icon;
 
                                     return (
                                         <a
