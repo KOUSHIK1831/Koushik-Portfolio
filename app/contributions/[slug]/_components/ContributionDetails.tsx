@@ -92,58 +92,37 @@ const ContributionDetails = ({ project, mrs, issues }: Props) => {
 
                     {/* Metadata Panel */}
                     <div className="fade-in-el opacity-0 rounded-2xl border border-muted-foreground/10 bg-muted/5 p-6 space-y-6">
-                        <h3 className="font-anton text-lg tracking-wider text-foreground">Project Details</h3>
-                        <div className="h-px bg-muted-foreground/10" />
-
-                        <div className="space-y-4">
+                        {project.projectUrl && (
                             <div>
-                                <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-2">Contributions</span>
-                                <div className="flex flex-wrap gap-2">
-                                    <span className="text-xs text-foreground flex items-center gap-1.5 bg-muted-foreground/5 border border-muted-foreground/10 px-2.5 py-1 rounded-md">
-                                        <GitPullRequest size={12} className="text-muted-foreground" style={{ color: project.accentColor }} />
-                                        {mrs.length} MRs
-                                    </span>
-                                    {issues.length > 0 && (
-                                        <span className="text-xs text-foreground flex items-center gap-1.5 bg-muted-foreground/5 border border-muted-foreground/10 px-2.5 py-1 rounded-md">
-                                            <CircleDot size={12} className="text-muted-foreground" />
-                                            {issues.length} Issues
-                                        </span>
-                                    )}
-                                </div>
+                                <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-2">Repository</span>
+                                <a
+                                    href={project.projectUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors text-foreground"
+                                >
+                                    <FolderGit2 size={14} className="text-muted-foreground" />
+                                    View Codebase
+                                    <ArrowUpRight size={12} className="text-muted-foreground" />
+                                </a>
                             </div>
+                        )}
 
-                            {project.projectUrl && (
-                                <div>
-                                    <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-2">Repository</span>
-                                    <a
-                                        href={project.projectUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors text-foreground"
-                                    >
-                                        <FolderGit2 size={14} className="text-muted-foreground" />
-                                        View Codebase
-                                        <ArrowUpRight size={12} className="text-muted-foreground" />
-                                    </a>
-                                </div>
-                            )}
-
-                            {project.allMRsUrl && (
-                                <div>
-                                    <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-2">Contribution List</span>
-                                    <a
-                                        href={project.allMRsUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors text-foreground"
-                                    >
-                                        <GitPullRequest size={14} className="text-muted-foreground" />
-                                        GitLab Merge Requests
-                                        <ArrowUpRight size={12} className="text-muted-foreground" />
-                                    </a>
-                                </div>
-                            )}
-                        </div>
+                        {project.allMRsUrl && (
+                            <div>
+                                <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-2">Contribution List</span>
+                                <a
+                                    href={project.allMRsUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors text-foreground"
+                                >
+                                    <GitPullRequest size={14} className="text-muted-foreground" />
+                                    GitLab Merge Requests
+                                    <ArrowUpRight size={12} className="text-muted-foreground" />
+                                </a>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -152,9 +131,6 @@ const ContributionDetails = ({ project, mrs, issues }: Props) => {
                     <div className="mb-16">
                         <div className="fade-in-el opacity-0 flex items-center gap-4 mb-8">
                             <h2 className="font-anton text-2xl tracking-wider text-foreground">Merge Requests</h2>
-                            <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-muted/10 text-muted-foreground border border-muted-foreground/10">
-                                {mrs.length}
-                            </span>
                             <div className="flex-1 h-px bg-muted-foreground/10" />
                         </div>
 
@@ -180,18 +156,9 @@ const ContributionDetails = ({ project, mrs, issues }: Props) => {
                                                 style={{ background: `linear-gradient(to right, ${project.accentColor}50, transparent)` }}
                                             />
                                             <div className="p-5">
-                                                <div className="flex items-center justify-between mb-3">
-                                                    <div className="flex items-center gap-1.5">
-                                                        <StatusIcon size={12} className={config.text} />
-                                                        <span className={cn('text-xs font-mono font-semibold', config.text)}>
-                                                            MR {mrNum}
-                                                        </span>
-                                                    </div>
-                                                    <span className={cn(
-                                                        'text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-md border',
-                                                        config.bg, config.text, config.border
-                                                    )}>
-                                                        {config.label}
+                                                <div className="flex items-center gap-1.5 mb-3">
+                                                    <span className="text-xs font-mono font-semibold text-foreground">
+                                                        MR {mrNum}
                                                     </span>
                                                 </div>
                                                 <h4 className="text-sm font-medium leading-snug line-clamp-2 mb-4 group-hover/card:text-primary transition-colors">
@@ -216,9 +183,6 @@ const ContributionDetails = ({ project, mrs, issues }: Props) => {
                     <div>
                         <div className="fade-in-el opacity-0 flex items-center gap-4 mb-8">
                             <h2 className="font-anton text-2xl tracking-wider text-foreground">Issues Resolved</h2>
-                            <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-muted/10 text-muted-foreground border border-muted-foreground/10">
-                                {issues.length}
-                            </span>
                             <div className="flex-1 h-px bg-muted-foreground/10" />
                         </div>
 

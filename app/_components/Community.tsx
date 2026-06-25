@@ -84,12 +84,6 @@ const Community = () => {
             <div className="container">
                 <SectionTitle title="OPEN SOURCE CONTRIBUTIONS" />
 
-                <div className="flex flex-wrap items-center gap-3 text-muted-foreground text-xs mb-8 -mt-4">
-                    <span>{mergeRequests.length} MRs</span>
-                    <span className="inline-block size-1.5 rounded-full bg-background-light" />
-                    <span>{uniqueRepoCount} repositories</span>
-                </div>
-
                 <div className="group/contributions" ref={containerRef}>
                     <div className="flex flex-col">
                         {projectList.map((item) => {

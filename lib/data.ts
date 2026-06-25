@@ -246,7 +246,7 @@ const MR_DATA: IMergeRequest[] = [
     { id: 4, title: 'Fear/voice chatbot', role: 'Authored & Assigned', status: 'merged', date: '2026-05-10T11:24:56Z', url: 'https://code.swecha.org/Abhilash653/agri-tech/-/merge_requests/4', project: 'Agri-Tech' },
     { id: 5, title: 'Feat/update filter fetch', role: 'Authored & Assigned', status: 'merged', date: '2026-05-10T09:33:27Z', url: 'https://code.swecha.org/Abhilash653/agri-tech/-/merge_requests/3', project: 'Agri-Tech' },
     { id: 6, title: 'Add language selector dropdown and Hindi support, remove Smart Farming section, fix bugs', role: 'Authored & Assigned', status: 'merged', date: '2026-05-10T05:50:53Z', url: 'https://code.swecha.org/Abhilash653/agri-tech/-/merge_requests/2', project: 'Agri-Tech' },
-    { id: 7, title: 'feat: integrate new features and fixes into main', role: 'Authored & Assigned', status: 'merged', date: '2026-04-29T11:26:24Z', url: 'https://code.swecha.org/koushik_18/hackathon-cs/-/merge_requests/1', project: 'Hackathon CS' },
+    { id: 7, title: 'feat: integrate new features and fixes into main', role: 'Authored & Assigned', status: 'merged', date: '2026-04-29T11:26:24Z', url: 'https://code.swecha.org/koushik_18/hackathon-cs/-/merge_requests/1', project: 'SnapShop AI' },
     { id: 8, title: 'Feat:Enable Ask Your Corpus for document-based Q&A with RAG', role: 'Authored & Assigned', status: 'opened', date: '2026-04-23T04:51:16Z', url: 'https://code.swecha.org/corpus/corpus-client-app/-/merge_requests/275', project: 'Corpus Client App' },
     { id: 9, title: 'fix(layout): align sidebar navigation and icons with dashboard across roles', role: 'Authored & Assigned', status: 'closed', date: '2026-04-07T10:53:08Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-frontend-vite/-/merge_requests/366', project: 'EHRS Frontend' },
     { id: 10, title: 'Add mypy to pre-commit', role: 'Authored & Assigned', status: 'merged', date: '2026-03-29T11:19:46Z', url: 'https://code.swecha.org/tools/gitlab-compliance-checker/-/merge_requests/90', project: 'GitLab Compliance Checker' },
@@ -290,8 +290,6 @@ const MR_DATA: IMergeRequest[] = [
     { id: 49, title: 'Updated', role: 'Authored', status: 'merged', date: '2026-01-18T10:08:46Z', url: 'https://code.swecha.org/viswam/admin/internships/icfai-ip-2-hackathon-17-jan/campusguide/-/merge_requests/3', project: 'CampusGuide' },
     { id: 50, title: 'updated files', role: 'Authored', status: 'merged', date: '2026-01-18T07:57:11Z', url: 'https://code.swecha.org/viswam/admin/internships/icfai-ip-2-hackathon-17-jan/campusguide/-/merge_requests/2', project: 'CampusGuide' },
     { id: 51, title: 'Upload', role: 'Authored', status: 'merged', date: '2026-01-18T07:47:34Z', url: 'https://code.swecha.org/viswam/admin/internships/icfai-ip-2-hackathon-17-jan/campusguide/-/merge_requests/1', project: 'CampusGuide' },
-    { id: 52, title: 'Update file koushik_18.md', role: 'Authored', status: 'opened', date: '2026-01-05T09:33:26Z', url: 'https://code.swecha.org/soai2025/profiles/-/merge_requests/586', project: 'SOAI Profiles' },
-    { id: 53, title: 'Update file README.md', role: 'Authored', status: 'opened', date: '2026-01-05T09:01:30Z', url: 'https://code.swecha.org/koushik_18/koushik/-/merge_requests/1', project: 'Koushik Profile' },
 ];
 
 const ISSUE_DATA: IIssue[] = [
@@ -306,14 +304,7 @@ const ISSUE_DATA: IIssue[] = [
     { id: 8, title: 'fix:verify-medicines-status-inventory', role: 'Authored & Assigned', status: 'closed', date: '2026-02-14T06:11:46Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-frontend-vite/-/issues/153', project: 'EHRS Frontend' },
     { id: 9, title: 'Bug fix:verify-medicines-validation-status-inventory', role: 'Authored & Assigned', status: 'closed', date: '2026-02-11T08:21:59Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-frontend-vite/-/issues/138', project: 'EHRS Frontend' },
     { id: 10, title: 'Unit Testing: API Routes & Core Logic', role: 'Authored & Assigned', status: 'closed', date: '2026-02-07T08:51:53Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-fastapi/-/issues/23', project: 'EHRS Backend' },
-    { id: 11, title: 'Daily Updates – Koushik – (03/02/26) (11am - 12:30m)', role: 'Authored & Assigned', status: 'closed', date: '2026-02-03T05:48:43Z', url: 'https://code.swecha.org/LagichettyKushal/team-amd-task-tracker/-/issues/28', project: 'Team AMD Task Tracker' },
-    { id: 12, title: 'Daily Update- Koushik - (03/02/2026) (9am - 11am)', role: 'Authored & Assigned', status: 'closed', date: '2026-02-03T05:40:06Z', url: 'https://code.swecha.org/LagichettyKushal/team-amd-task-tracker/-/issues/24', project: 'Team AMD Task Tracker' },
-    { id: 13, title: 'Input Handling and Vitals Recording Issues in eHRS', role: 'Author', status: 'opened', date: '2026-02-02T18:03:42Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-meta/-/issues/8', project: 'EHRs Meta' },
-    { id: 14, title: 'Daily Update- Koushik - (31/01/2026) (1:30pm - 5pm)', role: 'Author', status: 'closed', date: '2026-01-31T11:31:39Z', url: 'https://code.swecha.org/LagichettyKushal/team-amd-task-tracker/-/issues/20', project: 'Team AMD Task Tracker' },
-    { id: 15, title: 'Daily Update- Koushik - (31/01/2026) (9am - 1pm)', role: 'Authored & Assigned', status: 'closed', date: '2026-01-31T08:28:33Z', url: 'https://code.swecha.org/LagichettyKushal/team-amd-task-tracker/-/issues/14', project: 'Team AMD Task Tracker' },
-    { id: 16, title: 'Daily Update - Koushik - (30/01/26) (2pm - 5pm)', role: 'Authored & Assigned', status: 'closed', date: '2026-01-30T10:19:59Z', url: 'https://code.swecha.org/LagichettyKushal/team-amd-task-tracker/-/issues/10', project: 'Team AMD Task Tracker' },
-    { id: 17, title: 'Daily Update- Koushik - (30/01/2026) (9am - 1pm)', role: 'Authored & Assigned', status: 'closed', date: '2026-01-30T08:19:42Z', url: 'https://code.swecha.org/LagichettyKushal/team-amd-task-tracker/-/issues/7', project: 'Team AMD Task Tracker' },
-    { id: 18, title: 'Daily Updates – Koushik – 29 Jan 2026', role: 'Authored & Assigned', status: 'closed', date: '2026-01-29T05:59:03Z', url: 'https://code.swecha.org/LagichettyKushal/team-amd-task-tracker/-/issues/4', project: 'Team AMD Task Tracker' },
+
     { id: 19, title: 'feat: add partial proofred status to extracted text', role: 'Assigned', status: 'opened', date: '2026-05-15T04:43:17Z', url: 'https://code.swecha.org/corpus/corpus-server-app/-/issues/131', project: 'Corpus Server App' },
     { id: 20, title: 'chore: document date formatting scope and evaluate date-fns if requirements grow', role: 'Assigned', status: 'closed', date: '2026-03-22T21:01:40Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-frontend-vite/-/issues/252', project: 'EHRS Frontend' },
     { id: 21, title: 'Feat : Patient status for the known your patient after vitals', role: 'Assigned', status: 'closed', date: '2026-03-03T05:58:43Z', url: 'https://code.swecha.org/healthcare/medical-camp/ehrs-fastapi/-/issues/51', project: 'EHRS Backend' },
@@ -331,35 +322,32 @@ const PROJECT_INFOS: IProjectInfo[] = [
     { slug: 'ehrs-api-collection', name: 'EHRs API Collection', description: 'Bruno API collection for eHRS — documenting Doctors API with auth handling and validation notes.', category: 'HEALTHCARE', projectUrl: 'https://code.swecha.org/viswam/admin/internships/ehrs-api-collection', allMRsUrl: 'https://code.swecha.org/viswam/admin/internships/ehrs-api-collection/-/merge_requests?author_username=koushik_18', accentColor: '#eab308' },
     { slug: 'ehrs-meta', name: 'EHRs Meta', description: 'Meta-level issue tracking and cross-concern documentation for the eHRS ecosystem.', category: 'HEALTHCARE', projectUrl: 'https://code.swecha.org/healthcare/medical-camp/ehrs-meta', accentColor: '#a855f7' },
     { slug: 'gitlab-compliance-checker', name: 'GitLab Compliance Checker', description: 'Developer tooling for GitLab compliance — pre-commit hooks, mypy integration, team analytics, and contribution mapping.', category: 'TOOLS', projectUrl: 'https://code.swecha.org/tools/gitlab-compliance-checker', allMRsUrl: 'https://code.swecha.org/tools/gitlab-compliance-checker/-/merge_requests?author_username=koushik_18', accentColor: '#22c55e' },
-    { slug: 'team-amd-task-tracker', name: 'Team AMD Task Tracker', description: 'Daily task tracking and progress logging for Team AMD internship activities.', category: 'TOOLS', projectUrl: 'https://code.swecha.org/LagichettyKushal/team-amd-task-tracker', accentColor: '#06b6d4' },
     { slug: 'corpus-client-app', name: 'Corpus Client App', description: 'Telugu language corpus management frontend — RAG-based Q&A, location search, proofread status filters, and test coverage.', category: 'CORPUS', projectUrl: 'https://code.swecha.org/corpus/corpus-client-app', allMRsUrl: 'https://code.swecha.org/corpus/corpus-client-app/-/merge_requests?author_username=koushik_18', accentColor: '#3b82f6' },
     { slug: 'corpus-server-app', name: 'Corpus Server App', description: 'Backend for corpus management — proofread status migration and extracted text processing.', category: 'CORPUS', projectUrl: 'https://code.swecha.org/corpus/corpus-server-app', allMRsUrl: 'https://code.swecha.org/corpus/corpus-server-app/-/merge_requests?author_username=koushik_18', accentColor: '#8b5cf6' },
     { slug: 'corpus-bruno-collections', name: 'Corpus Bruno Collections', description: 'Bruno API collections for corpus application — roles and categories documentation.', category: 'CORPUS', projectUrl: 'https://code.swecha.org/Mukthanand21/corpus-bruno-collections', accentColor: '#ec4899' },
     { slug: 'agri-tech', name: 'Agri-Tech', description: 'Agricultural commodity price dashboard — multi-language support, voice chatbot, CI/CD, and interactive charts.', category: 'HACKATHON & LEARNING', projectUrl: 'https://code.swecha.org/Abhilash653/agri-tech', allMRsUrl: 'https://code.swecha.org/Abhilash653/agri-tech/-/merge_requests?author_username=koushik_18', accentColor: '#10b981' },
     { slug: 'campus-guide-hackathon', name: 'CampusGuide', description: 'RAG-based academic assistant — project configuration, license management, and VS Code setup for hackathon compliance.', category: 'HACKATHON & LEARNING', projectUrl: 'https://code.swecha.org/viswam/admin/internships/icfai-ip-2-hackathon-17-jan/campusguide', allMRsUrl: 'https://code.swecha.org/viswam/admin/internships/icfai-ip-2-hackathon-17-jan/campusguide/-/merge_requests?author_username=koushik_18', accentColor: '#f59e0b' },
-    { slug: 'hackathon-cs', name: 'Hackathon CS', description: 'Hackathon project — integrating new features and fixes for the Computer Science track.', category: 'HACKATHON & LEARNING', projectUrl: 'https://code.swecha.org/koushik_18/hackathon-cs', accentColor: '#14b8a6' },
+    { slug: 'hackathon-cs', name: 'SnapShop AI', description: 'Hackathon project — integrating new features and fixes for the Computer Science track.', category: 'HACKATHON & LEARNING', projectUrl: 'https://code.swecha.org/koushik_18/hackathon-cs', accentColor: '#14b8a6' },
     { slug: 'api-collection', name: 'API Collection', description: 'Bruno API collections for PUBG API — submission and organization of .bru files.', category: 'OTHER', projectUrl: 'https://code.swecha.org/viswam/admin/internships/api-collection', accentColor: '#64748b' },
-    { slug: 'soai-profiles', name: 'SOAI Profiles', description: 'Student profile submissions for the School of AI 2025 cohort.', category: 'OTHER', projectUrl: 'https://code.swecha.org/soai2025/profiles', accentColor: '#78716c' },
-    { slug: 'koushik-profile', name: 'Koushik Profile', description: 'Personal profile repository — README updates and profile documentation.', category: 'OTHER', projectUrl: 'https://code.swecha.org/koushik_18/koushik', accentColor: '#94a3b8' },
 ];
 
 const CATEGORY_GROUPS: ICategoryGroup[] = [
     { name: 'HEALTHCARE', projects: ['EHRS Frontend', 'EHRS Backend', 'EHRs API Collection', 'EHRs Meta'] },
-    { name: 'TOOLS', projects: ['GitLab Compliance Checker', 'Team AMD Task Tracker'] },
+    { name: 'TOOLS', projects: ['GitLab Compliance Checker'] },
     { name: 'CORPUS', projects: ['Corpus Client App', 'Corpus Server App', 'Corpus Bruno Collections'] },
-    { name: 'HACKATHON & LEARNING', projects: ['Agri-Tech', 'CampusGuide', 'Hackathon CS'] },
-    { name: 'OTHER', projects: ['API Collection', 'SOAI Profiles', 'Koushik Profile'] },
+    { name: 'HACKATHON & LEARNING', projects: ['Agri-Tech', 'CampusGuide', 'SnapShop AI'] },
+    { name: 'OTHER', projects: ['API Collection'] },
 ];
 
 export const COMMUNITY_CONTRIBUTIONS: ICommunityWork = {
     stats: {
-        totalMRs: 53,
+        totalMRs: 51,
         mergedMRs: 34,
-        openMRs: 6,
+        openMRs: 4,
         closedMRs: 13,
-        totalIssues: 28,
+        totalIssues: 21,
         openIssues: 4,
-        closedIssues: 24,
+        closedIssues: 17,
     },
     metrics: [
         { label: 'Total Contributions', value: 82, description: 'Merged MRs and resolved Issues across open-source projects.' },
@@ -417,18 +405,19 @@ export const COMMUNITY_CONTRIBUTIONS: ICommunityWork = {
 
 export const MY_EXPERIENCE: IExperience[] = [
     {
-        title: 'AI Intern',
+        title: 'AI Developer Intern',
         company: 'Viswam AI | IIIT Hyderabad',
         duration: 'Jan 2026 - Present',
         description: [
-            'Contributed Projects: 16 | Issues: 28 | MRs: 53 | Total Commits: 611',
-            'Built AI-powered applications using LLMs',
-            'Developed a Groq-powered coding assistant',
-            'Created a RAG-based Campus Guide using institutional documents',
-            'Used Sentence Transformers and Groq LLMs',
-            'Performed API discovery and testing with Bruno',
-            'Followed GitOps-style version control workflows',
+            'Developed AI applications using LLMs, RAG pipelines, prompt engineering, and AI workflow automation.',
+            'Built SnapShop AI using Vision-Language Models (VLMs) for automated product digitization.',
+            'Built a scalable multimodal RAG system with LLM-powered retrieval, ranking, and response generation.',
+            'Implemented semantic indexing, hybrid retrieval, query optimization, and citation-based answer generation.',
+            'Improved AI systems through testing, error handling, multilingual support, and Git-based development workflows.',
+            'Improved system reliability through unit testing, bug fixes, and error handling across frontend and backend systems (eHRS, Corpus).',
         ],
+        certificateUrl: 'https://drive.google.com/file/d/19FzDRNB2UboHVCwlI_s_2No0lmDtMOI4/view?usp=sharing',
+        certificateText: 'View Certificate',
     },
     {
         title: 'Digital Marketing Intern',
