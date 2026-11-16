@@ -71,6 +71,48 @@ lib/data.ts             Profile, skills, projects, experience
 public/                 Project images and static assets
 ```
 
+## Page structure and content flow
+
+The homepage in [`app/page.tsx`](app/page.tsx) composes sections for the
+introduction, about information, skills, projects, community work,
+experience, certifications, and contact information. Shared navigation,
+footer, smooth scrolling, preloader, cursor, and visual effects are
+configured in [`app/layout.tsx`](app/layout.tsx).
+
+Individual project pages live under `app/projects/[slug]/`, while
+community contribution pages live under `app/contributions/[slug]/`.
+Both use route parameters built from data in `lib/data.ts` and return
+Next.js's not-found page for unknown entries.
+
+## Adding a project
+
+1. Add a project record in the `PROJECTS` array in
+   [`lib/data.ts`](lib/data.ts), following the existing object shape.
+2. Give it a unique `slug`; that slug determines its detail-page URL.
+3. Add images to `public/projects/` and use matching public paths in
+   the project record.
+4. Include a meaningful project description, its actual technologies,
+   and working source/demo links when available.
+5. Run `pnpm build` to check route generation and metadata.
+
+For community contributions, update the corresponding records in
+`COMMUNITY_CONTRIBUTIONS`. Their detail routes are generated
+separately from the project pages.
+
+## Deployment checklist
+
+- Set the correct site URL in [`app/sitemap.ts`](app/sitemap.ts);
+  the file currently contains a placeholder comment.
+- Verify the profile links and contact information in `GENERAL_INFO`.
+- Confirm each project's images and external links work.
+- Run a production build before deploying to a compatible Next.js host.
+- Review metadata in `app/layout.tsx` and the dynamic project pages.
+
+> [!NOTE]
+> The checked-in source is the reference for supported pages and
+> animations. A hosted URL or its availability should be verified
+> independently before describing it as a live deployment.
+
 ## Customization
 
 Most portfolio content lives in [`lib/data.ts`](lib/data.ts). Update `GENERAL_INFO`, `PROJECTS`, skill listings, experience, and contact details there. Adjust layout sections in `app/_components/` and design styles in `app/globals.css`.
