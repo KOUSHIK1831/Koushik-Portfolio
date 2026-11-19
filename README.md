@@ -1,123 +1,39 @@
-<div align="center">
+# 🚀 My Portfolio Website
 
-# Koushik Portfolio
+![image](https://github.com/user-attachments/assets/ade45c4b-b2cb-46cb-b8a6-31cad3bd0c5a)
 
-**Personal portfolio showcasing AI engineering, software projects, experience, and community work.**
+[Checkout the initial design here](https://www.figma.com/design/56hODoGFDzZfZduBPfQeBg/New-Portfolio?node-id=18-1550&t=73vRMGTW0gspTSND-1)
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-000?logo=nextdotjs)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)](https://react.dev/)
+## 🚨 Forking this repo (please read!)
 
-[Overview](#overview) · [Quick start](#quick-start) · [Structure](#project-structure) · [Configuration](#customization)
+Many people have contacted me asking me if they can use this code for their own website, and the answer to that question is usually **yes, with attribution**.
 
-</div>
+I value keeping my site open source, but as you all know, _**plagiarism is bad**_. It's always disheartening whenever I find that someone has copied my site without giving me credit. I spent a non-trivial amount of effort building and designing this iteration of my website, and I am proud of it! All I ask of you all is to not claim this effort as your own.
 
-![Portfolio preview](public/projects/thumbnail/snapshop.png)
+Please also note that I did not build this site with the intention of it being a starter theme, so if you have questions about implementation, please refer to the [Next.js docs](https://nextjs.org/docs).
 
-## Overview
+If you like my work, give it a star⭐.
 
-A responsive, animation-rich portfolio for **Banuri Koushik Reddy**, built with the Next.js App Router. The site brings together an introduction, technical skills, projects, open-source/community activity, work experience, certifications, and contact details.
+### TL;DR
 
-### Highlights
+Yes, you can fork this repo. Please give me proper credit by linking back to [tajmirul.site](https://tajmirul.site/). Thanks!
 
-- Dynamic project listing and individual project-detail routes.
-- Experience, skills, certifications, contributions, and community sections.
-- Motion effects powered by **GSAP**, smooth scrolling with **Lenis**, and custom navigation.
-- Responsive UI with **Tailwind CSS**, reusable React components, and Lucide icons.
-- Search-engine metadata and sitemap support through Next.js.
+## 🛠 Installation & Set Up
 
-## Quick start
-
-**Requirements:** Node.js and a compatible package manager (the repository includes a pnpm lockfile).
+First, run the development server:
 
 ```bash
-git clone https://github.com/KOUSHIK1831/Koushik-Portfolio.git
-cd Koushik-Portfolio
 pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). To create and serve a production build:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-pnpm build
-pnpm start
-```
+## 🤝 Contributing
+If you'd like to contribute or suggest improvements, feel free to open an issue or submit a pull request. All contributions are welcome!
 
-> [!NOTE]
-> The repository currently defines a `lint` script using `next lint`, which is not supported by some newer Next.js configurations. If linting fails, check the installed Next.js version and run ESLint directly after configuring it for your environment.
+## Credit
+_This readme is inspired from [Brittany Chiang's github](https://github.com/bchiang7/v4)_
 
-## Tech stack
-
-| Area | Tools |
-| --- | --- |
-| Framework | Next.js 15, React, TypeScript |
-| Styling | Tailwind CSS, custom CSS |
-| Animation | GSAP, Lenis |
-| UI assets | Lucide icons, project thumbnails and illustrations |
-| Tooling | pnpm, ESLint, TypeScript |
-
-## Project structure
-
-```text
-app/
-  page.tsx              Landing page composition
-  layout.tsx            Root layout, metadata, navigation
-  _components/          Homepage sections
-  projects/[slug]/      Individual project pages
-  contributions/[slug]/ Contribution details
-components/             Shared visual and navigation components
-lib/data.ts             Profile, skills, projects, experience
-public/                 Project images and static assets
-```
-
-## Page structure and content flow
-
-The homepage in [`app/page.tsx`](app/page.tsx) composes sections for the
-introduction, about information, skills, projects, community work,
-experience, certifications, and contact information. Shared navigation,
-footer, smooth scrolling, preloader, cursor, and visual effects are
-configured in [`app/layout.tsx`](app/layout.tsx).
-
-Individual project pages live under `app/projects/[slug]/`, while
-community contribution pages live under `app/contributions/[slug]/`.
-Both use route parameters built from data in `lib/data.ts` and return
-Next.js's not-found page for unknown entries.
-
-## Adding a project
-
-1. Add a project record in the `PROJECTS` array in
-   [`lib/data.ts`](lib/data.ts), following the existing object shape.
-2. Give it a unique `slug`; that slug determines its detail-page URL.
-3. Add images to `public/projects/` and use matching public paths in
-   the project record.
-4. Include a meaningful project description, its actual technologies,
-   and working source/demo links when available.
-5. Run `pnpm build` to check route generation and metadata.
-
-For community contributions, update the corresponding records in
-`COMMUNITY_CONTRIBUTIONS`. Their detail routes are generated
-separately from the project pages.
-
-## Deployment checklist
-
-- Set the correct site URL in [`app/sitemap.ts`](app/sitemap.ts);
-  the file currently contains a placeholder comment.
-- Verify the profile links and contact information in `GENERAL_INFO`.
-- Confirm each project's images and external links work.
-- Run a production build before deploying to a compatible Next.js host.
-- Review metadata in `app/layout.tsx` and the dynamic project pages.
-
-> [!NOTE]
-> The checked-in source is the reference for supported pages and
-> animations. A hosted URL or its availability should be verified
-> independently before describing it as a live deployment.
-
-## Customization
-
-Most portfolio content lives in [`lib/data.ts`](lib/data.ts). Update `GENERAL_INFO`, `PROJECTS`, skill listings, experience, and contact details there. Adjust layout sections in `app/_components/` and design styles in `app/globals.css`.
-
-For deployment, use a hosting provider that supports the Next.js application build. Set up your project's domain and environment configuration in the hosting service.
-
-> [!TIP]
-> Replace personal details, social links, and project screenshots before using this repository for a different portfolio. Keep attribution for third-party assets and design work as required.
+## 📄 License
+This project is open source and available under the [MIT License](https://github.com/Tajmirul/portfolio-2.0/blob/main/LICENSE).
