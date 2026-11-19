@@ -71,19 +71,13 @@ const AboutMe = () => {
                     <div className="md:col-span-7">
                         <div className="text-lg text-muted-foreground">
                             <p className="slide-up-and-fade">
-                                I am a final-year Artificial Intelligence and Data Science student at ICFAI Tech Hyderabad (2022-2026). 
-                                My journey is driven by a fascination with how data and intelligent algorithms can transform the world.
+                                I studied at ICFAI University, Hyderabad, from July 2022 to May 2026 and earned a B.Tech in Data Science and Artificial Intelligence. I&apos;m interested in how data and intelligent algorithms can solve practical problems.
                             </p>
                             <p className="mt-4 slide-up-and-fade">
-                                I have hands-on experience building AI-powered applications using Large Language Models (LLMs), 
-                                Retrieval-Augmented Generation (RAG), and Machine Learning. From developing coding assistants 
-                                to document-grounded RAG systems, I thrive on bridging the gap between cutting-edge AI research 
-                                and practical, user-centric software solutions.
+                                During my six-month AI Developer internship at Viswam AI, I worked on document-grounded Q&amp;A, multilingual interfaces, and open-source healthcare software. My projects include coding-assistant prompts, machine learning experiments, and full-stack apps that make large language models (LLMs) and retrieval-augmented generation (RAG) useful in everyday workflows.
                             </p>
                             <p className="mt-4 slide-up-and-fade">
-                                My technical foundation includes deep dives into Prompt Engineering, Cloud Technologies (AWS/Azure), 
-                                and Core Computer Science principles like OOP and DSA. I am always eager to learn, collaborate, 
-                                and contribute to projects that push the boundaries of what&apos;s possible with AI.
+                                I work with Python, TypeScript, React, FastAPI, and PostgreSQL. My foundation includes prompt engineering, AWS and Azure fundamentals, object-oriented programming, and data structures and algorithms. I enjoy collaborating on search, multilingual software, and developer tools.
                             </p>
                         </div>
                     </div>
