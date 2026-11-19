@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import React, { useEffect, useState } from 'react';
-import { Github, Linkedin, Mail, ChevronDown, Terminal, Sparkles } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
 // Custom GitLab Icon component
@@ -135,7 +135,7 @@ const Banner = () => {
             );
 
             entranceTl.fromTo(
-                '.banner-terminal',
+                '.banner-portrait',
                 { opacity: 0, y: 30, scale: 0.95 },
                 { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'power3.out' },
                 '-=0.5',
@@ -186,11 +186,11 @@ const Banner = () => {
             }} />
 
             <div
-                className="container h-[100svh] min-h-[750px] flex items-center relative z-10"
+                className="container min-h-[max(750px,100svh)] flex items-center relative z-10 py-24"
                 ref={containerRef}
             >
                 {/* Main Content Grid */}
-                <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
+                <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-16 items-center">
                     
                     {/* Left - Main Content */}
                     <div className="relative">
@@ -294,57 +294,20 @@ const Banner = () => {
                         </div>
                     </div>
 
-                    {/* Right - Terminal Card + Stats */}
-                    <div className="hidden lg:flex flex-col gap-5 w-[320px]">
-                        {/* Terminal-style card */}
-                        <div className="banner-terminal slide-up-and-fade rounded-2xl border border-[#1e1e1e] bg-[#0a0a0a]/80 backdrop-blur-md overflow-hidden shadow-2xl shadow-black/30">
-                            {/* Terminal header */}
-                            <div className="flex items-center gap-2 px-4 py-3 border-b border-[#1a1a1a] bg-[#0e0e0e]">
-                                <div className="flex gap-1.5">
-                                    <span className="size-3 rounded-full bg-red-500/80" />
-                                    <span className="size-3 rounded-full bg-yellow-500/80" />
-                                    <span className="size-3 rounded-full bg-green-500/80" />
-                                </div>
-                                <div className="flex items-center gap-1.5 ml-auto text-muted-foreground/40">
-                                    <Terminal size={12} />
-                                    <span className="text-[10px] font-mono">koushik@dev</span>
-                                </div>
-                            </div>
-
-                            {/* Terminal body */}
-                            <div className="p-4 font-mono text-xs leading-relaxed space-y-2">
-                                <div>
-                                    <span className="text-primary">$</span>{' '}
-                                    <span className="text-muted-foreground">cat about.json</span>
-                                </div>
-                                <div className="text-muted-foreground/70 pl-2 border-l-2 border-[#1a1a1a]">
-                                    <div>{'{'}</div>
-                                    <div className="pl-3">
-                                        <span className="text-emerald-400">&quot;focus&quot;</span>
-                                        <span className="text-muted-foreground/40">: </span>
-                                        <span className="text-amber-300">&quot;AI/ML&quot;</span>
-                                    </div>
-                                    <div className="pl-3">
-                                        <span className="text-emerald-400">&quot;passion&quot;</span>
-                                        <span className="text-muted-foreground/40">: </span>
-                                        <span className="text-amber-300">&quot;Building intelligent systems&quot;</span>
-                                    </div>
-                                    <div className="pl-3">
-                                        <span className="text-emerald-400">&quot;learning&quot;</span>
-                                        <span className="text-muted-foreground/40">: </span>
-                                        <span className="text-sky-300">true</span>
-                                    </div>
-                                    <div>{'}'}</div>
-                                </div>
-                                <div className="flex items-center gap-1 pt-1">
-                                    <span className="text-primary">$</span>
-                                    <span className="inline-block w-[6px] h-3.5 bg-primary/70 animate-pulse" />
-                                </div>
-                            </div>
-                        </div>
+                    {/* Right - Portrait and Stats */}
+                    <div className="order-first flex flex-col gap-5 lg:order-none lg:w-[320px]">
+                        <Image
+                            src="/Koushik-Photo.png"
+                            alt="Banuri Koushik Reddy"
+                            width={1254}
+                            height={1254}
+                            sizes="(min-width: 1024px) 320px, (min-width: 640px) 192px, 160px"
+                            className="banner-portrait slide-up-and-fade mx-auto h-auto w-40 rounded-2xl border border-primary/20 shadow-2xl shadow-black/30 sm:w-48 lg:w-full"
+                            priority
+                        />
 
                         {/* Mini Stats */}
-                        <div className="grid grid-cols-3 gap-3">
+                        <div className="hidden lg:grid grid-cols-3 gap-3">
                             {[
                                 { value: '2+', label: 'Internships' },
                                 { value: '8+', label: 'AI Projects' },
